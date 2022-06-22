@@ -215,10 +215,6 @@ void ShaderInterface::renderImage(ApplicationModel &model, DisplayRect &displayR
     glm::mat4 rotationMatrix2(glm::rotate(identityMatrix, glm::radians(model.getRotationAngle()), rotationAxis2));
     glm::mat4 translationMatrix(glm::translate(identityMatrix, glm::vec3(0.0f, 0.0f, 0.0f)));
     
-    //  Die Reihenfolge der Rotationen ist so richtig.
-    //glm::mat4 modelMatrix = translationMatrix*rotationMatrix1*rotationMatrix2*scaleMatrix;
-
-
     pd.scaleMatrix = scaleMatrix;
     pd.translationMatrix = translationMatrix;
     pd.rotationMatrix = rotationMatrix1*rotationMatrix2;    
